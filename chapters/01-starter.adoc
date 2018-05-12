@@ -1,0 +1,12 @@
+
+== Qui a connu ceci ?
+
+image::{imagedir}/Nostalgie-1.png[width=100%]
+
+== Ou encore ceci ?
+
+image::{imagedir}/Nostalgie-2.png[width=100%]
+
+== Et puis...
+
+image::{imagedir}/Nostalgie-3.png[width=100%]
