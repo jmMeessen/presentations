@@ -1,6 +1,17 @@
 
 [background-color="hsl(50, 89%, 74%)"]
-= Bonjour !
+= Hello!
+
+== Olivier VERNIN
+[.right.text-center]
+image::{imagedir}/overnin.png[height="200",float="left"]
+
+* *Operation Engineer* @ CloudBees
+* Contact:
+** Twitter: link:https://twitter.com/0lblak[@0lblak]
+** Github: link:https://github.com/olblak[olblak]
+** Linkedin: link:https://www.linkedin.com/in/overnin/[overnin]
+** E-Mail: overnin@cloudbees.com
 
 == Damien DUPORTAL
 [.right.text-center]
@@ -13,36 +24,19 @@ image::{imagedir}/damien.jpg[height="400",float="left"]
 * Contact:
 ** Twitter: link:https://twitter.com/DamienDuportal[@DamienDuportal]
 ** Github: link:https://github.com/dduportal[dduportal]
-** eMail: damien.duportal@gmail.com
-
-== Jean-Marc MEESSEN
-[.right.text-center]
-image::{imagedir}/Jmm.png[height="300",float="left"]
-
-* *Customer Success Manager* @ CloudBees
-** Explorer of the great things out there
-** Loves to share his discoveries
-** Not too old for great adventures
-* Contact:
-** Twitter: link:https://twitter.com/JM_Meessen[@JM_Meessen]
-** Github: link:https://github.com/jmMeessen[jmMeessen]
-** eMail: jean-marc@meessen-web.org
-
-== !
-
-image::{imagedir}/fishSticks.jpg[width=100%]
+** E-Mail: damien.duportal@gmail.com
 
 == !
 
 image::{imagedir}/Presentation-CloudBees.png[width=110%]
 
-== Et vous ?
+== And you?
 [.left.text-center]
-image::{imagedir}/commitstrip.png[width="400",float="right"]
+image::{imagedir}/commitstrip.png[width="200"]
 
-* Y a-t-il des développeurs ici ?
-* Qui pratique l’Intégration Continue ?
-* Avec quels outils ?
-** Jenkins "Old School" ? / "New Generation" ?
-** GitLab ? TeamCity ? TravisCI ? Bamboo ?
-** Autre ?
+* Developers?
+* Who is doing Continuous Integration/Delivery/Deployment?
+** Which tools?
+*** Jenkins "Old School" ? / "New Generation" ?
+*** GitLab ? TeamCity ? TravisCI ? Bamboo ?
+*** Something Else?

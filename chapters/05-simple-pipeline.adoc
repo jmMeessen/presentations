@@ -2,44 +2,6 @@
 [background-color="hsl(50, 89%, 74%)"]
 = Simple Pipeline
 
-== Accessing your Lab Instance
-
-* You need Vagrant (2.0.1+) + VirtualBox (5.1.30+)
-* Run the following commands to start the Lab VM locally:
-+
-[source,bash]
-----
-# Getting the VM template (1 time only)
-vagrant box add jenkins-lab-demo http://bit.ly/2BxqFPT
-# Initialize the environment (1 time only)
-mkdir ~/jenkins-lab-demo && cd ~/jenkins-lab-demo
-vagrant init -m -f jenkins-lab-demo
-# Start the lab
-vagrant up
-----
-
-* Open the URL link:http://[YOUR_INSTANCE_DNS]:10000
-** Welcome to the *Lab Home Page*
-* Click the link *Workshop Slides*
-** Browse to this current slide
-
-== Accessing Source Code
-
-* Access the *Gitea git server*:
-** link:{gitserver-url}[{gitserver-url},window=_blank]
-** *Log in*  as the user *`butler`* (password is the same)
-* Access the source code:
-** Once authenticated, click on *Explore* (on top)
-** Click on *{admin-user}/{demoapp-repo-name}*
-*** Direct link: link:{demoapp-repo-web-url}[]
-
-== Accessing Jenkins
-
-* Access your Jenkins instance:
-** link:{jenkins-url}[{jenkins-url},window=_blank]
-** *Log in*  as the user *`butler`* (password is the same)
-** This is the "Jenkins Classic GUI"
-
 == Blue Ocean
 
 * Switch to Blue Ocean:

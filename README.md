@@ -1,14 +1,13 @@
-# NightClazz-2017
+# Oufti-Playground Jenkins Lab's Slides
 
-Notes about the NightClazz on Jenkins,
-at Zenika Lille the 4th December 2017.
+This repository contains the slide deck for the Oufti-Lab Jenkins workshops.
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-## Generate the presentation
+## Generate the Presentation
 
 * You need:
-  - Docker CE 17.09+ (with local bind-mount capability - Docker4Mac, Docker4Windows or a local Linux Docker install is OK)
+  - Docker CE 18.05+ (with local bind-mount capability - Docker4Mac, Docker4Windows or a local Linux Docker install is OK)
   - GNU Make
 
 * Do:

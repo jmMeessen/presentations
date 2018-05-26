@@ -1,0 +1,67 @@
+
+[background-color="hsl(50, 89%, 74%)"]
+= Workshop
+
+== Goals
+
+* It is a "101" (starter) about:
+** Jenkins (Declarative) Pipelines
+** Blue Ocean
+* It is a Workshop: learn by "doing"
+** We start from scratch
+** Come back home with a fully working example
+
+== At Home: Getting the Workshop Lab as a local VM
+
+* You need link:https://www.vagrantup.com/[Vagrant] (2.1.0+)
+and link:https://www.virtualbox.org/[VirtualBox] (5.2.12+)
+* Run the following commands to start the local VM:
++
+[source,bash,subs="attributes"]
+----
+# Getting the VM template (1 time only)
+vagrant box add {box-name} {box-url}
+# Initialize the environment (1 time only)
+mkdir ~/{box-name} && cd ~/{box-name}
+vagrant init -m -f {box-name}
+# Start the lab
+vagrant up
+----
+
+* Open the following URL: link:{homepage-url}[]
+* Welcome to the *Lab Home Page*!
+
+== On-Site: Getting the Workshop Lab as a Cloud VM
+
+* We provide you a set of Cloud VMs: only web browser is required
+
+* Access the "Instance Sheet Page",
+put your name on the "Name" column to allocate the instance for yourself,
+and click on the "Instance URL" link on the same line.
+** link:{instance-sheet-url}[Instance sheet page]
+
+* Welcome to the *Lab Home Page*!
+
+== Accessing Customized Slides
+
+* 
+
+
+== Accessing Source Code
+
+* Access the *Gitea git server*:
+** link:{gitserver-url}[{gitserver-url},window=_blank]
+** *Log in*  as the user *`butler`* (password is the same)
+* Access the source code:
+** Once authenticated, click on *Explore* (on top)
+** Click on *{admin-user}/{demoapp-repo-name}*
+*** Direct link: link:{demoapp-repo-web-url}[]
+
+== Accessing Jenkins
+
+* Access your Jenkins instance:
+** link:{jenkins-url}[{jenkins-url},window=_blank]
+** *Log in*  as the user *`butler`* (password is the same)
+** This is the "Jenkins Classic GUI"
+
+instance-sheet-url

@@ -1,10 +1,6 @@
 include::./attributes.adoc[]
 
-= Jenkins, la nouvelle génération
-
-NightClazz Lille - 4 Décembre 2017
-
-Damien DUPORTAL & Jean-Marc MEESSEN
+= Jenkins Workshop: Pipelines & Blue Ocean 101
 
 ++++
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
@@ -16,12 +12,12 @@ Damien DUPORTAL & Jean-Marc MEESSEN
 </a>.
 ++++
 
-include::{chaptersdir}/01-starter.adoc[]
 
 :leveloffset: +1
+include::{chaptersdir}/01-starter.adoc[]
 include::{chaptersdir}/02-hello.adoc[]
-include::{chaptersdir}/03-objectifs.adoc[]
-include::{chaptersdir}/04-definitions.adoc[]
+include::{chaptersdir}/03-workshop.adoc[]
+// include::{chaptersdir}/04-definitions.adoc[]
 include::{chaptersdir}/05-simple-pipeline.adoc[]
 include::{chaptersdir}/06-pipeline-basiques.adoc[]
 include::{chaptersdir}/07-agents.adoc[]
