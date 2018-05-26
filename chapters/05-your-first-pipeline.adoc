@@ -1,16 +1,18 @@
 
 [background-color="hsl(50, 89%, 74%)"]
-= Simple Pipeline
+= Your First Pipeline
 
 == Blue Ocean
 
+* Browse to your Jenkins instance
 * Switch to Blue Ocean:
 ** link:{jenkins-url}/blue[Direct link to Blue Ocean GUI,window=_blank]
 ** _Or_ click on the item "Open Blue Ocean", on the left menu
 
-== Exercise: Create First Project
+== Follow-along: Initialize Your First Pipeline 1/3
 
-* Create a new Pipeline, with the following properties:
+* Follow the presenter instruction to create a new Pipeline,
+with the following properties:
 ** Stored in *Git*
 ** Get the *SSH* URL from the _git server_
 ** Configure Jenkins access to the source code:
@@ -18,7 +20,7 @@
 *** Browse to SSH/GPG Keys
 *** Add a new key, by copy and pasting from Jenkins
 
-== Exercise - Your First Pipeline
+== Follow-along: Initialize Your First Pipeline 2/3
 
 * Click the button *Create a Pipeline*
 * Use the *Blue Ocean Pipeline Editor* and *Gitea git server*
@@ -27,30 +29,30 @@
 ** "Building..." for *Build*, "Testing..." for *Test* ...
 * Save, add a commit message and see the build kicking off
 
-== Solution - Your first pipeline
+== Follow-along: Initialize Your First Pipeline 3/3
 
 [source,groovy,subs="attributes"]
 ----
 include::{pipeline-solutions}/01-Jenkinsfile-echo[]
 ----
 
-== Exercise - Run tasks with Pipeline
+== Exercise: Run tasks with Pipeline
 
 * Using the *Blue Ocean Pipeline Editor*:
 ** Edit the current Pipeline's 3 stages to run scripts
 ** Scripts are stored in the `./scripts` folder (in SCM)
 ** Use the step *Shell Script* (keyword `sh`)
 ** Remove the `echo` steps
-* Save, add a commit message and see the build kicking off
+* Save, add a commit message and see the build kicks off
 
-== Solution - Run tasks with Pipeline
+== Solution: Run tasks with Pipeline
 
 [source,groovy,subs="attributes"]
 ----
 include::{pipeline-solutions}/02-Jenkinsfile-base[]
 ----
 
-== Exercise - Archives and Tests
+== Exercise: Archives and Tests
 
 * Using the *Blue Ocean Pipeline Editor*:
 ** Edit the current Pipeline
@@ -61,7 +63,7 @@ include::{pipeline-solutions}/02-Jenkinsfile-base[]
 * Save, add a commit message and see the build kicking off
 * Build should be *UNSTABLE*
 
-== Solution - Archives and Tests
+== Solution: Archives and Tests
 
 [source,groovy,subs="attributes"]
 ----

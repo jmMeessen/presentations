@@ -13,8 +13,8 @@
 
 == At Home: Getting the Workshop Lab as a local VM
 
-* You need link:https://www.vagrantup.com/[Vagrant] (2.1.0+)
-and link:https://www.virtualbox.org/[VirtualBox] (5.2.12+)
+* You need link:https://www.vagrantup.com/[Vagrant,window=_blank] (2.1.0+)
+and link:https://www.virtualbox.org/[VirtualBox,window=_blank] (5.2.12+)
 * Run the following commands to start the local VM:
 +
 [source,bash,subs="attributes"]
@@ -28,7 +28,7 @@ vagrant init -m -f {box-name}
 vagrant up
 ----
 
-* Open the following URL: link:{homepage-url}[]
+* Open the following URL: link:{homepage-url}[{homepage-url},window=_blank]
 * Welcome to the *Lab Home Page*!
 
 == On-Site: Getting the Workshop Lab as a Cloud VM
@@ -38,30 +38,31 @@ vagrant up
 * Access the "Instance Sheet Page",
 put your name on the "Name" column to allocate the instance for yourself,
 and click on the "Instance URL" link on the same line.
-** link:{instance-sheet-url}[Instance sheet page]
+** link:{instance-sheet-url}[Instance sheet page,window=_blank]
 
 * Welcome to the *Lab Home Page*!
 
 == Accessing Customized Slides
 
-* 
-
+* Each instance hosts a copy of this slide-deck,
+with customized links
+* If you click the link "Workshop Slides",
+a new tab will open, to this slide-deck
 
 == Accessing Source Code
 
+* Each instance hosts a local git server.
 * Access the *Gitea git server*:
 ** link:{gitserver-url}[{gitserver-url},window=_blank]
-** *Log in*  as the user *`butler`* (password is the same)
+** *Log in*  as the user *`{admin-user}`* (password is the same)
 * Access the source code:
 ** Once authenticated, click on *Explore* (on top)
 ** Click on *{admin-user}/{demoapp-repo-name}*
-*** Direct link: link:{demoapp-repo-web-url}[]
+*** Direct link: link:{demoapp-repo-web-url}[{demoapp-repo-web-url},window=_blank]
 
 == Accessing Jenkins
 
 * Access your Jenkins instance:
 ** link:{jenkins-url}[{jenkins-url},window=_blank]
-** *Log in*  as the user *`butler`* (password is the same)
+** *Log in*  as the user *`{admin-user}`* (password is the same)
 ** This is the "Jenkins Classic GUI"
-
-instance-sheet-url

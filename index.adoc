@@ -12,13 +12,12 @@ include::./attributes.adoc[]
 </a>.
 ++++
 
-
 :leveloffset: +1
 include::{chaptersdir}/01-starter.adoc[]
 include::{chaptersdir}/02-hello.adoc[]
 include::{chaptersdir}/03-workshop.adoc[]
-// include::{chaptersdir}/04-definitions.adoc[]
-include::{chaptersdir}/05-simple-pipeline.adoc[]
+include::{chaptersdir}/04-jenkins-ci-and-blue-ocean.adoc[]
+include::{chaptersdir}/05-your-first-pipeline.adoc[]
 include::{chaptersdir}/06-pipeline-basiques.adoc[]
 include::{chaptersdir}/07-agents.adoc[]
 include::{chaptersdir}/08-pipeline-avances.adoc[]
