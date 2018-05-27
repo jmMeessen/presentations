@@ -1,12 +1,12 @@
 
 = Have you used this?
 
-image::{imagedir}/Nostalgie-1.png[width=100%]
+image::{imagedir}/Nostalgie-1.png[]
 
 == And this?
 
-image::{imagedir}/Nostalgie-2.png[width=100%]
+image::{imagedir}/Nostalgie-2.png[]
 
 == And.... this?
 
-image::{imagedir}/Nostalgie-3.png[width=100%]
+image::{imagedir}/Nostalgie-3.png[]
