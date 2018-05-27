@@ -42,6 +42,14 @@ include::{pipeline-solutions}/03-Jenkinsfile-unit-tests.groovy[]
 * What are the changes betwee *UNSTABLE* and *SUCCESS*?
 ** Color, Test failure notification badge, etc.
 
+== Continuous Integration (CI)
+
+image::{imagedir}/fail-fast-continuous-integration.png[height=200]
+
+* Each code integration is validated by an *automated build*
+* Code is integrated *often*, at least daily, to be a non-event
+* Feedback loop to close the continous cycle
+
 == Exercise: Réparer le build
 
 * Le build est en état `UNSTABLE` (jaune)
@@ -99,7 +107,9 @@ depuis *Gitea git server*
 ** Menu de gauche de votre job "Pipeline" (ou MultiBranch)
 *** link:{demoapp-mb-job-url}/pipeline-syntax/[{demoapp-mb-job-url}/pipeline-syntax/,window=_blank]
 
-
-// * Build should be *UNSTABLE*
 //
-// == Solution: Archives and Tests
+// * link:https://jenkins.io[jenkins.io:,windows=blank]
+// ** link:https://jenkins.io/doc/pipeline/tour/hello-world/[Tour of the Pipeline,window=_blank]
+// ** link:https://jenkins.io/doc/pipeline[Pipeline "Handbook",windows=blank]
+// ** link:https://jenkins.io/doc/book/pipeline/syntax/[Pipeline Syntax Reference,windows=blank]
+// ** link:https://jenkins.io/doc/pipeline/steps/[Pipeline Steps Reference,windows=blank]

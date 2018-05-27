@@ -16,7 +16,7 @@
 * You need link:https://www.vagrantup.com/[Vagrant,window=_blank] (2.1.0+)
 and link:https://www.virtualbox.org/[VirtualBox,window=_blank] (5.2.12+)
 * Run the following commands to start the local VM:
-+
+
 [source,bash,subs="attributes"]
 ----
 # Getting the VM template (1 time only)

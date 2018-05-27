@@ -19,7 +19,7 @@
 :revealjs_controls: true
 :instance-sheet-url: https://docs.google.com/spreadsheets/d/1iMAAufvJKtEjI0twOvhdMzETc49OKYUSM7fyd6QnuMc/edit?usp=sharing
 :box-name: jenkins-lab-workshop
-:box-url: https://github.com/oufti-playground/lab-vm/releases/download/nightclazz-lille-2017/jenkins-lab-demo.box
+:box-url: https://github.com/oufti-playground/lab-vm<...>
 :external-domain: localhost
 :external-port: 10000
 :admin-user: butler

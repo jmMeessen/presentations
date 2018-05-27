@@ -20,6 +20,15 @@
 *** Browse to SSH/GPG Keys
 *** Add a new key, by copy and pasting from Jenkins
 
+== Blue Ocean Pipeline Editor
+
+* Provides a Pipeline's graphical editor in Blue Ocean,
+with full round trip with SCM:
+** Scaffold your Pipeline, Save it, Execute it.
+* Supports existing Declarative Pipeline,
+as starting from scratch
+* Requires a compatible SCM (Git over SSH, Github, BitBucket, etc.)
+
 == Follow along: Initialize Your First Pipeline 2/4
 
 * Blue Ocean cannot find any `Jenkinsfile`
