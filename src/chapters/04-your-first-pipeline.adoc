@@ -4,8 +4,7 @@
 
 == Blue Ocean
 
-* We want to create a Pipeline from scratch:
-** Documentation is hard. Let's try Blue Ocean.
+* We want to create a Pipeline from scratch using Blue Ocean.
 * Browse to your Jenkins instance and switch to Blue Ocean:
 ** Click on the item "Open Blue Ocean", on the left menu
 ** _Or_ link:{jenkins-url}/blue[Direct link to Blue Ocean GUI,window=_blank]
@@ -15,10 +14,8 @@
 * Follow the presenter instructions to create a new Pipeline:
 ** Stored in *Git*
 ** Get the *SSH* URL from the _git server_
-** Configure Jenkins access to the source code:
-*** In Gitea, click the top-right user drop down
-*** Browse to SSH/GPG Keys
-*** Add a new key, by copy and pasting from Jenkins
+** Jenkins is *already* allowed to access the source code:
+*** Nothing to do for SSH Key
 
 == Blue Ocean Pipeline Editor
 
@@ -55,7 +52,9 @@ as starting from scratch
 
 * Take time to browse the build page in Blue Ocean
 ** Click on the stage, unfold the logs...
-* Let's have a look to the generated Jenkinsfile in the SCM:
+
+* Use `CTRL + S` (On Mac: `CMD + S`),
+to switch to textual description:
 
 [source,groovy,subs="attributes"]
 ----
@@ -76,6 +75,8 @@ runs the script `./scripts/deploy.sh`
 ** Use the *Build* stage as example
 
 == Solution: Add 2 New Stages to your First Pipeline
+
+* Check the file `Jenkinsfile` into the SCM (*Gitea Git Server*)
 
 [source,groovy,subs="attributes"]
 ----

@@ -32,4 +32,4 @@
 :demoapp-repo-git-url: ssh://git@gitserver:5022/{admin-user}/{demoapp-repo-name}.git
 :demoapp-mb-job-name: {demoapp-repo-name}
 :demoapp-mb-job-url: {jenkins-url}/job/{demoapp-mb-job-name}
-:demoapp-mb-job-build-url: {demoapp-mb-job-url}/build?delay=0
+:demoapp-mb-job-build-url: {jenkins-url}/git/notifyCommit?url={demoapp-repo-git-url}

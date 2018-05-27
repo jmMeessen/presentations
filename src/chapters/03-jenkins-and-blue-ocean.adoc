@@ -11,19 +11,6 @@ image::{imagedir}/jenkins_logo.png[height="200"]
 * One of the first and most popular Continous Integration Engine
 * Plugin based
 
-//
-// == DevOps: Software as a "Supply Chain"
-//
-// image::{imagedir}/supply-chain.png[]
-//
-// == !
-//
-// image::{imagedir}/CD_and_CD.png[]
-//
-// == The Pipeline
-//
-// image::{imagedir}/pipeline.png[height=600]
-
 == Jenkins Pipelines
 
 image::{imagedir}/pipeline.jpg[height=200]

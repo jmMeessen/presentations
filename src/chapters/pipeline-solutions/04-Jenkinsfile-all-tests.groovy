@@ -4,15 +4,13 @@ pipeline {
     stage('Build') {
       steps {
         sh './scripts/build.sh'
-        archiveArtifacts 'target/*.jar'
-        stash(name: 'build-result', includes: 'target/**/*')
+        junit 'target/surefire-reports/*.xml'
       }
     }
     stage('Test') {
       steps {
-        unstash 'build-result'
-        sh './scripts/test.sh'
-        junit 'target/**/*.xml'
+        sh './scripts/integration-tests.sh'
+        junit 'target/failsafe-reports/*.xml'
       }
     }
     stage('Deploy') {

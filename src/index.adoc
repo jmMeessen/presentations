@@ -13,13 +13,12 @@ include::./attributes.adoc[]
 ++++
 
 :leveloffset: +1
-include::{chaptersdir}/01-starter.adoc[]
-include::{chaptersdir}/02-hello.adoc[]
-include::{chaptersdir}/03-workshop.adoc[]
-include::{chaptersdir}/04-jenkins-and-blue-ocean.adoc[]
-include::{chaptersdir}/05-your-first-pipeline.adoc[]
-include::{chaptersdir}/06-pipeline-tests-and-webhooks.adoc[]
-include::{chaptersdir}/07-agents.adoc[]
-include::{chaptersdir}/08-pipeline-avances.adoc[]
+include::{chaptersdir}/01-hello.adoc[]
+include::{chaptersdir}/02-workshop.adoc[]
+include::{chaptersdir}/03-jenkins-and-blue-ocean.adoc[]
+include::{chaptersdir}/04-your-first-pipeline.adoc[]
+include::{chaptersdir}/05-pipeline-tests-and-webhooks.adoc[]
+// include::{chaptersdir}/07-agents.adoc[]
+// include::{chaptersdir}/08-pipeline-avances.adoc[]
 
 :leveloffset: -1
