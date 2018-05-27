@@ -104,4 +104,4 @@ click on the "Pipeline Syntax" link of the left menu
 * *Reference documentation* on jenkins.io:
 ** link:https://jenkins.io/doc/pipeline[Pipeline "Handbook",windows=blank]
 ** link:https://jenkins.io/doc/book/pipeline/syntax/[Pipeline Syntax Reference,windows=blank]
-** link:https:jenkins.io/doc/pipeline/steps/[Pipeline Steps Reference,windows=blank]
+** link:https://jenkins.io/doc/pipeline/steps/[Pipeline Steps Reference,windows=blank]
