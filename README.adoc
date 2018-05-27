@@ -1,0 +1,32 @@
+
+= Oufti-Playground Jenkins Lab's Slides
+
+This repository contains the slide deck for the Oufti-Lab Jenkins workshops.
+
+++++
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+  <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+</a>
+<br />This work is licensed under a
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+  Creative Commons Attribution 4.0 International License
+</a>.
+++++
+
+== Generate the Presentation
+
+* You need:
+** Docker CE 18.05+ (with local bind-mount capability -
+Docker4Mac, Docker4Windows or a local Linux Docker install)
+** GNU Make
+
+* Build the slides:
+** Clone the repository
+** Run the following `make` command:
++
+[source,bash]
+----
+make
+----
+
+** Open the resulting file `./docs/index.html`
