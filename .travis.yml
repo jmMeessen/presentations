@@ -3,7 +3,8 @@ services:
 - docker
 
 script:
-- make
+- make documents
+- make verify
 
 deploy:
   provider: pages
