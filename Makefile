@@ -2,8 +2,8 @@
 documents:
 	@docker run --rm \
 		-v $(CURDIR)/src:/documents \
-		-v $(CURDIR)/docs:/docs \
+		-v $(CURDIR)/dist:/dist \
 		asciidoctor/docker-asciidoctor \
-			asciidoctor-revealjs /documents/index.adoc -o /docs/index.html
+			asciidoctor-revealjs /documents/index.adoc -o /dist/index.html
 
 .PHONY: documents
