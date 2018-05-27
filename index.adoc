@@ -18,7 +18,7 @@ include::{chaptersdir}/02-hello.adoc[]
 include::{chaptersdir}/03-workshop.adoc[]
 include::{chaptersdir}/04-jenkins-ci-and-blue-ocean.adoc[]
 include::{chaptersdir}/05-your-first-pipeline.adoc[]
-include::{chaptersdir}/06-pipeline-basiques.adoc[]
+include::{chaptersdir}/06-pipeline-tests-and-webhooks.adoc[]
 include::{chaptersdir}/07-agents.adoc[]
 include::{chaptersdir}/08-pipeline-avances.adoc[]
 

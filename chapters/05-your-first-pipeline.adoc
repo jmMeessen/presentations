@@ -4,15 +4,15 @@
 
 == Blue Ocean
 
-* Browse to your Jenkins instance
-* Switch to Blue Ocean:
-** link:{jenkins-url}/blue[Direct link to Blue Ocean GUI,window=_blank]
-** _Or_ click on the item "Open Blue Ocean", on the left menu
+* We want to create a Pipeline from scratch:
+** Documentation is hard. Let's try Blue Ocean.
+* Browse to your Jenkins instance and switch to Blue Ocean:
+** Click on the item "Open Blue Ocean", on the left menu
+** _Or_ link:{jenkins-url}/blue[Direct link to Blue Ocean GUI,window=_blank]
 
-== Follow-along: Initialize Your First Pipeline 1/3
+== Follow along: Initialize Your First Pipeline 1/4
 
-* Follow the presenter instruction to create a new Pipeline,
-with the following properties:
+* Follow the presenter instructions to create a new Pipeline:
 ** Stored in *Git*
 ** Get the *SSH* URL from the _git server_
 ** Configure Jenkins access to the source code:
@@ -20,52 +20,55 @@ with the following properties:
 *** Browse to SSH/GPG Keys
 *** Add a new key, by copy and pasting from Jenkins
 
-== Follow-along: Initialize Your First Pipeline 2/3
+== Follow along: Initialize Your First Pipeline 2/4
 
-* Click the button *Create a Pipeline*
-* Use the *Blue Ocean Pipeline Editor* and *Gitea git server*
-* Create a Pipeline that have 3 stages: *Build*, *Test* and *Deploy*
-* Each stage has 1 step that prints a message
-** "Building..." for *Build*, "Testing..." for *Test* ...
-* Save, add a commit message and see the build kicking off
+* Blue Ocean cannot find any `Jenkinsfile`
+** It opens automatically the *Pipeline Editor* for you
 
-== Follow-along: Initialize Your First Pipeline 3/3
+* A red message appears saying: "a stage is needed":
+** Create a stage named *Build* by clicking the big "+"
 
-[source,groovy,subs="attributes"]
-----
-include::{pipeline-solutions}/01-Jenkinsfile-echo[]
-----
+* Each stage (virtual) is composed of "steps" (implementation)
+** "At least one step is required"
 
-== Exercise: Run tasks with Pipeline
+== Follow along: Initialize Your First Pipeline 3/4
 
-* Using the *Blue Ocean Pipeline Editor*:
-** Edit the current Pipeline's 3 stages to run scripts
-** Scripts are stored in the `./scripts` folder (in SCM)
-** Use the step *Shell Script* (keyword `sh`)
-** Remove the `echo` steps
-* Save, add a commit message and see the build kicks off
+* We want the stage *Build* to have 2 steps:
+** Print the message `Building...`
+** Execute the shell script `./scripts/build.sh`
 
-== Solution: Run tasks with Pipeline
+* Time to run this Pipeline: click the "Save" button
+** Add a meaningful Description (commit message)
+** Commit to 'master'
+** Clic Save & Run, and see the build kicking off
 
-[source,groovy,subs="attributes"]
-----
-include::{pipeline-solutions}/02-Jenkinsfile-base[]
-----
+== Follow-along: Initialize Your First Pipeline 4/4
 
-== Exercise: Archives and Tests
-
-* Using the *Blue Ocean Pipeline Editor*:
-** Edit the current Pipeline
-** *Build* stage should archive all `{asterisk}.jar` files
-*** Found in the directory `target`. TIP for pattern: `{asterisk}.jar`
-** *Test* stage should publish the `junit` test reports
-*** Found in `target`. TIP for recursive pattern: `{asterisk}{asterisk}/{asterisk}.xml`
-* Save, add a commit message and see the build kicking off
-* Build should be *UNSTABLE*
-
-== Solution: Archives and Tests
+* Take time to browse the build page in Blue Ocean
+** Click on the stage, unfold the logs...
+* Let's have a look to the generated Jenkinsfile in the SCM:
 
 [source,groovy,subs="attributes"]
 ----
-include::{pipeline-solutions}/03-Jenkinsfile-archive-tests[]
+include::{pipeline-solutions}/01-Jenkinsfile-build-stage-only.groovy[]
+----
+
+== Exercise: Add 2 New Stages to your First Pipeline
+
+* Goal: add 2 new stages to your Pipeline:
+*Integration Tests*::
+runs the script `./scripts/integration-tests.sh`
+
+*Deploy*::
+runs the script `./scripts/deploy.sh`
+
+* Use the *Blue Ocean Pipeline Editor*:
+** Click on the "Edit" button (pen's icon)
+** Use the *Build* stage as example
+
+== Solution: Add 2 New Stages to your First Pipeline
+
+[source,groovy,subs="attributes"]
+----
+include::{pipeline-solutions}/02-Jenkinsfile-base.groovy[]
 ----

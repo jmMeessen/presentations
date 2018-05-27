@@ -3,17 +3,18 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Build'
+        sh './scripts/build.sh'
+        junit 'target/surefire-reports/*.xml'
       }
     }
     stage('Test') {
       steps {
-        echo 'Test'
+        sh './scripts/integration-tests.sh'
       }
     }
     stage('Deploy') {
       steps {
-        echo 'Deploy'
+        sh './scripts/deploy.sh'
       }
     }
   }

@@ -1,0 +1,105 @@
+
+[background-color="hsl(50, 89%, 74%)"]
+= Pipeline: Tests and Webhooks
+
+== Follow-along: Test Reports with JUnit 1/3
+
+* Junit is ....
+* We want to report test results to Jenkins
+* Let's start with Unit Test's results
+** Generated during the *Build* stage
+** XML files located in `target/surefire-reports/`
+
+== Follow-along: Test Reports with JUnit 2/3
+
+* Open the Pipeline in *Blue Ocean Editor*
+* Edit the stage *Build*
+* Remove the _Print Message_ step
+* Add a new _Archive JUnit-formatted test results_ step
+** Set the field *TestResults* to `target/surefire-reports/{asterisk}.xml`
+* Save the pipeline and check the build
+
+== Follow-along: Test Reports with JUnit 3/3
+
+* When the build finished, check the "Tests" section
+* Let's have a look to the generated Pipeline:
+
+[source,groovy,subs="attributes"]
+----
+include::{pipeline-solutions}/03-Jenkinsfile-unit-tests.groovy[]
+----
+
+== Exercise: Integration Tests Report
+
+* We also want to publish integration tests reports
+** Generated during the *Integration Tests* stage
+** XML files located in `target/failsafe-reports/`
+
+* Expected status of the build: *UNSTABLE*
+
+== Solution: Integration Tests Report
+
+* What are the changes betwee *UNSTABLE* and *SUCCESS*?
+** Color, Test failure notification badge, etc.
+
+== Exercise: Réparer le build
+
+* Le build est en état `UNSTABLE` (jaune)
+* *Priorité:* réparer le build
+* Utiliser *Gitea git server*
+* Les tests d'intégration sont dans `src/test/java/hello`
+* Indices:
+** _Integration Tests:_ == *IT*
+** Il suffit de savoir commenter/dé-commenter
+
+== Solution: Réparer le build
+
+* Depuis
+link:{demoapp-repo-web-url}/src/master/src/test/java/hello/HelloControllerIT.java[src/test/java/hello/HelloControllerIT.java]
+** Cliquer sur "Edit"
+* Commenter la ligne 39
+* *Dé*-commenter la ligne 40
+* *Commit* avec un message (push automatique)
+* Lancer le build manuellement dans Blue Ocean
+* Le build doit être vert (*Stable*)
+
+== Webhooks pour un retour plus rapide
+
+* Nous avons dû lancer le build manuellement
+* IC: Retours *rapides* !
+** Lancer le build dès que le code est poussé
+
+== Exercise: Webhooks
+
+* Configurons un *"Webhook"* :
+** Depuis *Gitea git server* -> *Settings* -> *Webhooks*
+*** link:{demoapp-repo-web-url}/settings/hooks[Lien direct vers la configuration de Webhooks,window=_blank]
+* Ajouter un nouveau webhook:
+** Type: *Gitea*
+** When should this webhook be triggered?: *I need everything*
+** Payload URL:
+link:{demoapp-mb-job-build-url}[{demoapp-mb-job-build-url},window=_blank]
+
+== Solution: Webhooks
+
+* Ajoutez un commentaire dans le Jenkinsfile
+depuis *Gitea git server*
+** Un build va démarrer
+** Validez dans l'onglet "Changes"
+
+== Aller plus loin...
+
+* Dans l'éditeur *Blue Ocean*, voir la version textuelle:
+** Combinaison `CTRL + S` (On Mac: `CMD +S`)
+** Bi-directionnel: essayez de charger une solution de pipeline
+
+* Le *Pipeline Syntax Snippet Generator* comme acolyte:
+** Génération dynamique en fonction de vos plugins
+** Depuis l'interface "ancienne" de Jenkins
+** Menu de gauche de votre job "Pipeline" (ou MultiBranch)
+*** link:{demoapp-mb-job-url}/pipeline-syntax/[{demoapp-mb-job-url}/pipeline-syntax/,window=_blank]
+
+
+// * Build should be *UNSTABLE*
+//
+// == Solution: Archives and Tests
