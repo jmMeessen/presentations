@@ -1,0 +1,173 @@
+
+[background-color="hsl(50, 89%, 74%)"]
+= Agents
+
+== What is an Agent?
+
+* A process running on a remote *node*,
+ready to execute tasks on behalf of the Jenkins master
+** Formerly known as _slave_
+
+image::{imagedir}/orchestra.jpg[height=400]
+
+== Benefits of Agents
+
+* Horizontal Scalability of builds
+** More builds? More machines!
+
+* Diminution of "Blast Radius"
+** An agent goes down? Another takes the load
+
+* Safety of the Jenkins Master
+** `rm -rf ${NON_UNITIALIZED}/*` without `set -u`
+
+== Agent and Pipeline
+
+* A pipeline's build is executed on an *agent*
+** The keyword `agent` must be specified
+
+* Some stages can be executed on *different* agents:
+** E.g. Build on Linux, Test on Linux and Windows
+** The keyword `agent` can be specified per stage
+
+== Follow-along: Specify Agent for our Pipeline 1/2
+
+* Edit the Pipeline with the Blue Ocean Editor
+
+* Access the "Pipeline Settings" on the right section
+** TIP: If not visible, click on the "Start" node
+
+* Change the agent `any` to a *node* with the label `maven3-jdk8`
+** "any" was picking randomly an available agent
+** Note the other options
+
+* Save and run the Pipeline
+
+== Follow-along: Specify Agent for our Pipeline 2/2
+
+* Let's have a look to the expected Pipeline:
+
+[source,groovy,subs="attributes"]
+----
+include::{pipeline-solutions}/05-Jenkinsfile-global-agent.groovy[]
+----
+
+* Search for occurrences of
+`Running on` in "Artifacts" - `pipeline.log`
+
+== Exercise: Execute Deploy stage in "production"
+
+* Goal: the Stage *Deploy* has to be run in (fake) "production"
+* Tools: there is an agent with the label "production"
+* Change the Pipeline to have only the *Deploy* stage
+running on this agent
+
+== Solution: Execute Deploy stage in "production"
+
+* Validate using the occurrences of `Running on` in the `pipeline.log`
+* Let's have a look to the expected Pipeline:
+
+[source,groovy,subs="attributes"]
+----
+include::{pipeline-solutions}/06-Jenkinsfile-deploy-agent.groovy[]
+----
+
+== Reusing Binary
+
+* Pipeline efficiency and security rule:
+build once, fingerprint and then reuse
+
+* Challenge: workspace is *NOT* shared across agents.
+** A new workspace is allocated for *each* stage
+
+* Pipeline can "pass" artifacts from stage to stage
+** Assumption: building a binary is 1 order of magnitude slower
+than copying it on the network
+
+* 2 types of "passing artifacts", both are using the master:
+** `archiveArtifacts`: Store artifacts with the build (as `pipeline.log`)
+** `stash` / `unstash`:
+
+
+== Follow-along: Reuse Jar File
+
+
+== Exercise: Parallel Integration Tests
+
+* Goal: Run Integration Tests for both Java 7 and 8
+* Tools: you have an agent `jdk7` and another agent `jdk8`
+* Change the Pipeline to execute, in *parallel*,
+the integration tests on each of these agents
+
+== Solution: Parallel Integration Tests
+
+
+
+
+// == A note about Agent Pipeline Syntax
+//
+//
+//
+// == Exercice - Agents
+//
+// * Exécuter l'étape *Build* sur un agent
+// configuré avec le label `maven-jdk8`
+// * Exécuter l'étape *Test* sur un agent
+// configuré avec le label `java8`
+// * L'éditeur Blue Ocean est utilisable
+//
+// == Solution - Agents
+//
+// [source,groovy,subs="attributes"]
+// ----
+// include::{pipeline-solutions}/06-Jenkinsfile-agents[]
+// ----
+//
+//
+// == Exercise - Réutilisation Binaire
+//
+// * But: réutiliser les binaires générés dans *Build*
+// * Action: "mise sur étagère": *Stash / Unstash*
+// * Modifier le Pipeline pour :
+// ** "Stasher" le dossier `target`, à la fin de la phase *Build*
+// ** "Unstasher" au début de la phase *Test*
+// * _Attention_, une limite de l'éditeur *Blue Ocean*
+// va être atteinte
+//
+// == Solution - Réutilisation Binaire
+//
+// * L'éditeur Blue Ocean ne supporte pas encore
+// le ré-ordonnancement de "stages"
+// ** Mode textuel et/ou *Snippet Generator* à utiliser
+//
+// [source,groovy,subs="attributes"]
+// ----
+// include::{pipeline-solutions}/04-Jenkinsfile-stash-tests[]
+// ----
+//
+// == Post-Stage
+//
+// * Section `post` :
+// ** Contient des "steps" à exécuter
+// à la fin du Pipeline *ou* après une "stage"
+// ** Divisé en "condition d'états":
+// `always`, `success`, `failure`, `changed`
+// * Chaque condition contient ses propres "steps"
+// * Pas _encore_ intégré dans l'éditeur Blue Ocean
+
+//
+// == Exercice - Tests Parallèles
+//
+// * *But:* Tester en parallèle l'application
+// sur java 7 et 8
+// * Mot clef `parallel` définissant un block contenant
+// des "stages"
+// * Agent `java7` pour le Test Java 7
+// * L'éditeur Blue Ocean est utilisable (et recommandé)
+//
+// == Solution - Tests Parallèles
+//
+// [source,groovy,subs="attributes"]
+// ----
+// include::{pipeline-solutions}/07-Jenkinsfile-parallel-tests[]
+// ----

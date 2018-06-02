@@ -28,7 +28,7 @@ image::{imagedir}/damien.jpg[height="400",float="left"]
 
 == !
 
-image::{imagedir}/Presentation-CloudBees.png[]
+image::{imagedir}/Presentation-CloudBees.jpg[]
 
 == And you?
 [.left.text-center]
