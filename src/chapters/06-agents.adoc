@@ -85,7 +85,7 @@ build once, fingerprint and then reuse
 ** Assumption: building a binary is 1 order of magnitude slower
 than copying it on the network
 
-* 2 Artifact's types, both are using the master:
+* 2 types of "passing artifacts", both are using the master:
 ** Permanent: `archiveArtifacts` - Store artifacts on the master,
 with the build record (as `pipeline.log`)
 ** Ephemeral: `stash` (and `unstash`) - Stash files to the master,
