@@ -78,7 +78,7 @@ and eventually starts new builds
 * Identify the name of the failing Test
 ** Using Blue Ocean's Test section
 
-* Use the SCM (the *Gitea Git Server*) to edit the code
+* Use the SCM (the *Gitea Web UI*) to edit the code
 ** Tests are stored into `src/test/java/hello/`
 ** Each time the code is changed, a build is started
 
