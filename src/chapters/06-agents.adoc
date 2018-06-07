@@ -81,7 +81,7 @@ build once, fingerprint and then reuse
 * Challenge: workspace is *NOT* shared across agents.
 ** A new workspace is allocated for *each* stage
 
-* Pipeline can move artifacts from stage to stage
+* Pipeline can copy artifacts from stage to stage
 ** Assumption: building a binary is 1 order of magnitude slower
 than copying it on the network
 
