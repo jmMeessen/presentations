@@ -12,16 +12,16 @@ image::{imagedir}/orchestra.jpg[height=400]
 
 == Benefits of Agents
 
-* Specific Agent Role
-** HIGH CPU/MEMORY agent
-** Windows,Linux,... agent
+* Specific Agent Roles:
+** Custom operating system (Windows, Linux)
+** Specialized hardware (Macs, Solaris, Arm CPUs, etc.)
 
 * Horizontal Scalability of builds
 ** More builds? More machines!
 
 * Diminution of "Blast Radius"
 ** An agent goes down? Another takes the load
-** Jenkins Master (OOM?)
+** Jenkins Master goes down (OOM, Restart): no impact
 
 == Agent and Pipeline
 
@@ -73,7 +73,7 @@ running on this agent
 include::{pipeline-solutions}/06-Jenkinsfile-deploy-agent.groovy[]
 ----
 
-== Reusing Binary
+== Reusing Binary: Challenge
 
 * Pipeline efficiency and security rule:
 build once, fingerprint and then reuse
@@ -81,21 +81,24 @@ build once, fingerprint and then reuse
 * Challenge: workspace is *NOT* shared across agents.
 ** A new workspace is allocated for *each* stage
 
-* Pipeline can copy artifacts from stage to stage
+
+== Reusing Binary: Solution
+
+* Pipeline can store artifacts from stage to stage
 ** Assumption: building a binary is 1 order of magnitude slower
 than copying it on the network
 
-* 2 types of "passing artifacts", both are using the master:
-** Permanent: `archiveArtifacts` - Store artifacts on the master,
-with the build record (as `pipeline.log`)
-** Ephemeral: `stash` (and `unstash`) - Stash files to the master,
-(Restore stashed files from the master), deleted when the builds stops.
+* Two types of artifact storages, both using a copy-to-master:
+** Permanent storage with `archiveArtifacts`.
+** Ephemeral storage with `stash` (and `unstash`),
+deletion when the build stops.
 
-
-== Follow-along: Reuse Jar File 1/2
+== Follow-along: Reuse Jar File 1/3
 
 * Goal: we want the stages *Integration Test* and *Deploy* to reuse
 the folder `target` generated during the stage *Build*
+
+== Follow-along: Reuse Jar File 2/3
 
 * Edit the stage *Build* and add a new step:
 ** Type of the new step: "Stash some files to be used later in the build"
@@ -107,7 +110,7 @@ the folder `target` generated during the stage *Build*
 ** Set the Name to `generated-artifacts`
 ** Move these steps at the *beginning* of each stage
 
-== Follow-along: Reuse Jar File 2/2
+== Follow-along: Reuse Jar File 3/3
 
 * Validate using the logs of the *Deploy* stage (comparing with previous builds)
 * Let's have a look to the expected Pipeline:
