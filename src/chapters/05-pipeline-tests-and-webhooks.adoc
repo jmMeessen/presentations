@@ -8,7 +8,13 @@
 * Let's start with Unit Test's results:
 ** They are in "Junit" format,
 generated during the *Build* stage
-** XML files located in `target/surefire-reports/`
+** XML files located in:
++
+[source,bash]
+----
+target/surefire-reports/
+----
+
 ** Jenkins's "Junit" plugin is installed by default
 
 == Follow-along: Test Reports with JUnit 2/3
@@ -34,7 +40,13 @@ include::{pipeline-solutions}/03-Jenkinsfile-unit-tests.groovy[]
 
 * We also want the integration test's reports
 ** Generated during the *Integration Tests* stage
-** XML files located in `target/failsafe-reports/`
+** Still using JUnit, but XML files
+are generated in:
++
+[source,bash]
+----
+target/failsafe-reports/
+----
 
 * Expected status of the build: *UNSTABLE*
 
@@ -75,8 +87,8 @@ and eventually starts new builds
 * We are doing Continous Integration!
 ** The build *MUST* be fixed as *top* priority
 
-* Identify the name of the failing Test
-** Using Blue Ocean's Test section
+* Identify the name of the failing test
+** TIP: Use Blue Ocean's "Test" tab
 
 * Use the SCM (the *Gitea Web UI*) to edit the code
 ** Tests are stored into `src/test/java/hello/`

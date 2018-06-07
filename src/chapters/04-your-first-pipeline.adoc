@@ -14,6 +14,7 @@
 * Follow the presenter instructions to create a new Pipeline:
 ** Stored in *Git*
 ** Get the *SSH* URL from the _git server_
+*** `{demoapp-repo-git-url}`
 ** Jenkins is *already* allowed to access the source code:
 *** Nothing to do for SSH Key
 
@@ -53,7 +54,8 @@ as starting from scratch
 * Take time to browse the build page in Blue Ocean
 ** Click on the stage, unfold the logs...
 
-* Use `CTRL + S` (On Mac: `CMD + S`),
+* Click the "Edit" (pen) button to go back to the editor,
+and use `CTRL + S` (On Mac: `CMD + S`),
 to switch to textual description:
 
 [source,groovy,subs="attributes"]

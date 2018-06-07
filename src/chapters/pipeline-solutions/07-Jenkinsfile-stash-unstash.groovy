@@ -9,10 +9,12 @@ pipeline {
       steps {
         sh './scripts/build.sh'
         junit 'target/surefire-reports/*.xml'
+        stash(name: 'generated-artifacts', includes: 'target/**/*')
       }
     }
     stage('Test') {
       steps {
+        unstash 'generated-artifacts'
         sh './scripts/integration-tests.sh'
         junit 'target/failsafe-reports/*.xml'
       }
@@ -24,6 +26,7 @@ pipeline {
         }
       }
       steps {
+        unstash 'generated-artifacts'
         sh './scripts/deploy.sh'
       }
     }
