@@ -12,14 +12,16 @@ image::{imagedir}/orchestra.jpg[height=400]
 
 == Benefits of Agents
 
+* Specific Agent Role
+** HIGH CPU/MEMORY agent
+** Windows,Linux,... agent
+
 * Horizontal Scalability of builds
 ** More builds? More machines!
 
 * Diminution of "Blast Radius"
 ** An agent goes down? Another takes the load
-
-* Safety of the Jenkins Master
-** `rm -rf ${NON_UNITIALIZED}/*` without `set -u`
+** Jenkins Master (OOM?)
 
 == Agent and Pipeline
 
@@ -79,11 +81,11 @@ build once, fingerprint and then reuse
 * Challenge: workspace is *NOT* shared across agents.
 ** A new workspace is allocated for *each* stage
 
-* Pipeline can "pass" artifacts from stage to stage
+* Pipeline can move artifacts from stage to stage
 ** Assumption: building a binary is 1 order of magnitude slower
 than copying it on the network
 
-* 2 types of "passing artifacts", both are using the master:
+* 2 Artifact's types, both are using the master:
 ** Permanent: `archiveArtifacts` - Store artifacts on the master,
 with the build record (as `pipeline.log`)
 ** Ephemeral: `stash` (and `unstash`) - Stash files to the master,
