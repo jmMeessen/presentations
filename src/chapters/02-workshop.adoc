@@ -7,9 +7,14 @@
 * It is a "101" (starter) about:
 ** Jenkins (Declarative) Pipelines
 ** Blue Ocean
+
 * It is a Workshop: learn by "doing"
 ** We start from scratch
 ** Come back home with a fully working example
+
+* Sources available on Github:
+** link:https://github.com/oufti-playground/presentations[Slides,window=_blank]
+** link:https://github.com/oufti-playground/lab-vm[Lab-VM,window=_blank]
 
 == At Home: Getting the Workshop Lab as a local VM
 
