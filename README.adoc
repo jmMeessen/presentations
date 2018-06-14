@@ -30,3 +30,5 @@ make
 ----
 
 ** Open the resulting file `./docs/index.html`
+
+.
