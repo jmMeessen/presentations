@@ -6,12 +6,6 @@
 [.right.text-center]
 image::{imagedir}/overnin.png[height="200",float="left"]
 
-* *Operation Engineer* @ CloudBees
-* Contact:
-** Twitter: link:https://twitter.com/0lblak[@0lblak]
-** Github: link:https://github.com/olblak[olblak]
-** Linkedin: link:https://www.linkedin.com/in/overnin/[overnin]
-** E-Mail: overnin@cloudbees.com
 
 == Damien DUPORTAL
 [.right.text-center]
