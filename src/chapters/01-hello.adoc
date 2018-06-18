@@ -2,23 +2,20 @@
 [background-color="hsl(50, 89%, 74%)"]
 = Hello!
 
-== Olivier VERNIN
+== Jean-Marc MEESSEN
 [.right.text-center]
-image::{imagedir}/overnin.png[height="200",float="left"]
+image::{imagedir}/Jmm_no_better_place_then_home.jpg[height="450",float="left"]
 
+* *Customer Success Manager* @ CloudBees
 
-== Damien DUPORTAL
-[.right.text-center]
-image::{imagedir}/damien.jpg[height="400",float="left"]
-
-* *Training Engineer* @ CloudBees
-** Docker & Apple fanboy.
-** Human stack focused
-** Rock climber
 * Contact:
-** Twitter: link:https://twitter.com/DamienDuportal[@DamienDuportal]
-** Github: link:https://github.com/dduportal[dduportal]
-** E-Mail: damien.duportal@gmail.com
+** Twitter: link:https://twitter.com/jm_meessen[@jm_meessen]
+** Github: link:https://github.com/jmMeessen[jmMeessen]
+** E-Mail: jean-marc@meessen-web.org
+
+== !
+
+image::{imagedir}/fishSticks.jpg[width="100%"]
 
 == !
 
