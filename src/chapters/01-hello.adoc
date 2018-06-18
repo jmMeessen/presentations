@@ -15,7 +15,7 @@ image::{imagedir}/Jmm_no_better_place_then_home.jpg[height="450",float="left"]
 
 == !
 
-image::{imagedir}/fishSticks.jpg[width="100%"]
+image::{imagedir}/fishSticks.jpg[]
 
 == !
 
