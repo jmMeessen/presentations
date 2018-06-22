@@ -16,6 +16,14 @@
 ** link:https://github.com/jmMeessen/presentations[Slides,window=_blank]
 ** link:https://github.com/jmMeessen/lab-vm[Lab-VM,window=_blank]
 
+== Thank you
+
+* This workshop would not have been possible without the work 
+of *Damien Duportal*
+** E-Mail: damien.duportal@gmail.com
+** Github: dduportal
+** Twitter: @DamienDuportal
+
 == At Home: Getting the Workshop Lab as a local VM
 
 * You need link:https://www.vagrantup.com/[Vagrant,window=_blank] (2.1.0+)
