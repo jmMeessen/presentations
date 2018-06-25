@@ -44,7 +44,7 @@ vagrant up
 * Open the following URL: link:{homepage-url}[{homepage-url},window=_blank]
 * Welcome to the *Lab Home Page*!
 
-== On-Site: Getting the Workshop Lab as a Cloud VM
+== JUC (Paris): Getting the Workshop Lab as a Cloud VM
 
 * We provide you a set of Cloud VMs: only web browser is required
 
