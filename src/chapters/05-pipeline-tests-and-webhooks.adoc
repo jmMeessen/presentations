@@ -111,7 +111,7 @@ link:{demoapp-repo-web-url}/src/master/src/test/java/hello/HelloControllerIT.jav
 ** Access your job's page from the "Classic UI" and
 click on the "Pipeline Syntax" link of the left menu
 *** "Snippet Generator"
-*** "Declarative Directive Generator Generator"
+*** "Declarative Directive Generator"
 
 * *Reference documentation* on jenkins.io:
 ** link:https://jenkins.io/doc/pipeline[Pipeline "Handbook",windows=blank]
