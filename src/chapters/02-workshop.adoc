@@ -24,25 +24,25 @@ of *Damien Duportal*
 ** Github: dduportal
 ** Twitter: @DamienDuportal
 
-== At Home: Getting the Workshop Lab as a local VM
-
-* You need link:https://www.vagrantup.com/[Vagrant,window=_blank] (2.1.0+)
-and link:https://www.virtualbox.org/[VirtualBox,window=_blank] (5.2.12+)
-* Run the following commands to start the local VM:
-
-[source,bash,subs="attributes"]
-----
-# Getting the VM template (1 time only)
-vagrant box add {box-name} {box-url}
-# Initialize the environment (1 time only)
-mkdir ~/{box-name} && cd ~/{box-name}
-vagrant init -m -f {box-name}
-# Start the lab
-vagrant up
-----
-
-* Open the following URL: link:{homepage-url}[{homepage-url},window=_blank]
-* Welcome to the *Lab Home Page*!
+//== At Home: Getting the Workshop Lab as a local VM
+//
+//* You need link:https://www.vagrantup.com/[Vagrant,window=_blank] (2.1.0+)
+//and link:https://www.virtualbox.org/[VirtualBox,window=_blank] (5.2.12+)
+//* Run the following commands to start the local VM:
+//
+//[source,bash,subs="attributes"]
+//----
+//# Getting the VM template (1 time only)
+//vagrant box add {box-name} {box-url}
+//# Initialize the environment (1 time only)
+//mkdir ~/{box-name} && cd ~/{box-name}
+//vagrant init -m -f {box-name}
+//# Start the lab
+//vagrant up
+//----
+//
+//* Open the following URL: link:{homepage-url}[{homepage-url},window=_blank]
+//* Welcome to the *Lab Home Page*!
 
 == JUC: Getting the Workshop Lab as a Cloud VM
 
