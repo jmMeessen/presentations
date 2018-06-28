@@ -8,7 +8,7 @@ image::{imagedir}/jenkins_logo.png[height="200"]
 
 * Task orchestrator
 * Open-Source software written in Java
-* One of the first and most popular Continous Integration Engine (2004)
+* One of the first and most popular Continous Integration Engine (2006)
 * Plugin based
 
 == Jenkins Pipelines
