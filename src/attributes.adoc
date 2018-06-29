@@ -19,7 +19,7 @@
 :revealjs_controls: true
 :instance-sheet-url: https://docs.google.com/spreadsheets/d/1_GFAzZzdcTqDNmTvfyBeAdbJ7SjnVTVr0J42yOn5Z5I/edit?usp=sharing
 :box-name: jenkins-lab-demo
-:box-url: https://bit.ly/2HvmzGu
+:box-url: http://bit.ly/2lHt9RS
 :external-domain: localhost
 :external-port: 10000
 :admin-user: butler
